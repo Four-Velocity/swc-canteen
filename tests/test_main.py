@@ -4,7 +4,17 @@ from main import app
 
 client = TestClient(app)
 
+
 def test_app():
-    response = client.get("/")
+    response = client.get("api/badge")
     assert response.status_code == 200
-    assert response.json() == {"message": "Hello World"}
+    assert response.json() == {
+        "schemaVersion": 1,
+        "label": "",
+        "message": "live",
+        "color": "#7673C0",
+        "labelColor": "#430098",
+        "namedLogo": "heroku",
+        "style": "flat-square",
+        "cacheSeconds": 500
+    }
