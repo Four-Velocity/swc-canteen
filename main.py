@@ -3,7 +3,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("api/badge")
+@app.get("/api/badge/")
 def badge():
     return {
         "schemaVersion": 1,

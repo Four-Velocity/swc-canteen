@@ -6,7 +6,7 @@ client = TestClient(app)
 
 
 def test_app():
-    response = client.get("api/badge")
+    response = client.get("/api/badge/")
     assert response.status_code == 200
     assert response.json() == {
         "schemaVersion": 1,
