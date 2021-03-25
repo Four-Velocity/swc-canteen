@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = {version = "==0.63.0", extras = ["all"]}
+
+[dev-packages]
+coverage = {version = "==5.5", extras = ["toml"]}
+factory-boy = "==3.2.0"
+pytest = "==6.2.2"
+pytest-cov = "==2.11.1"
+pytest-factoryboy = "==2.1.0"
+pytest-mock = "==3.5.1"
+ipython = "==7.21.0"
+
+[requires]
+python_version = "3.9"
