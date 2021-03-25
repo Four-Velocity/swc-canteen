@@ -12,6 +12,6 @@ def badge():
         "color": "#7673C0",
         "labelColor": "#430098",
         "namedLogo": "heroku",
-        "style": "flat-square",
+        "style": "for-the-badge",
         "cacheSeconds": 500
     }
