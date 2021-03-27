@@ -1,14 +1,12 @@
-from fastapi.testclient import TestClient
+from fastapi import APIRouter
+from .models import Badge
 
-from main import app
-
-client = TestClient(app)
+router = APIRouter()
 
 
-def test_app():
-    response = client.get("/api/badge/")
-    assert response.status_code == 200
-    assert response.json() == {
+@router.get("/badges/website/", response_model=Badge)
+def website_badge():
+    return {
         "schemaVersion": 1,
         "label": "",
         "message": "live",
