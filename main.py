@@ -1,17 +1,7 @@
 from fastapi import FastAPI
+from apps.common.routers import router as common_router
+
 
 app = FastAPI()
 
-
-@app.get("/api/badge/")
-def badge():
-    return {
-        "schemaVersion": 1,
-        "label": "",
-        "message": "live",
-        "color": "#7673C0",
-        "labelColor": "#430098",
-        "namedLogo": "heroku",
-        "style": "for-the-badge",
-        "cacheSeconds": 500
-    }
+app.include_router(common_router)
